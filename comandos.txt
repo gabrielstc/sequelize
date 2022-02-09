@@ -1,0 +1,27 @@
+npm init -y
+
+npm install express
+
+npm install body-parser
+
+npm install --save-dev nodemon
+
+npm install mysql2
+
+npm install sequelize sequelize-cli path
+
+##boilerplate 
+npx sequelize-cli init 
+
+##criar modelo:
+npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string
+
+#cria estrutura no banco
+npx sequelize-cli db:migrate
+
+
+#cria um seed de exemplo
+npx sequelize-cli seed:generate --name demo-pessoa
+
+#cria os registros que estao no arquivo de seed
+npx sequelize-cli db:seed:all
